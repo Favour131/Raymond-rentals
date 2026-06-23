@@ -1,65 +1,31 @@
-window.addEventListener("scroll",()=>{
+const cards = document.querySelectorAll(
+".value-card, .why-card, .stat-card"
+);
 
-document.querySelector("nav")
+const observer = new IntersectionObserver(entries => {
 
-.style.background=
+entries.forEach(entry => {
 
-window.scrollY>100
+if(entry.isIntersecting){
 
-?
+entry.target.style.opacity = "1";
+entry.target.style.transform = "translateY(0)";
 
-"rgba(0,0,0,.85)"
-
-:
-
-"transparent";
-
-});
-
-
-
-const cards=
-
-document.querySelectorAll(".glass-card");
-
-
-
-cards.forEach(card=>{
-
-card.addEventListener(
-
-"mousemove",
-
-e=>{
-
-let x=
-
-e.offsetX/20;
-
-let y=
-
-e.offsetY/20;
-
-card.style.transform=
-
-`rotateY(${x}deg)
-rotateX(${-y}deg)`;
+}
 
 });
 
-
-
-card.addEventListener(
-
-"mouseleave",
-
-()=>{
-
-card.style.transform=
-
-"rotate(0deg)";
-
+},{
+threshold:.2
 });
+
+cards.forEach(card => {
+
+card.style.opacity = "0";
+card.style.transform = "translateY(40px)";
+card.style.transition = ".7s";
+
+observer.observe(card);
 
 });
 

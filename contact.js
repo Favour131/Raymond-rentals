@@ -1,65 +1,24 @@
-window.addEventListener("scroll",()=>{
+const form =
+document.getElementById("contactForm");
 
-document.querySelector("nav")
+const successMessage =
+document.getElementById("successMessage");
 
-.style.background=
+form.addEventListener("submit", e => {
 
-window.scrollY>100
+e.preventDefault();
 
-?
+successMessage.style.display =
+"block";
 
-"rgba(0,0,0,.85)"
+form.reset();
 
-:
+setTimeout(() => {
 
-"transparent";
+successMessage.style.display =
+"none";
 
-});
-
-
-
-const cards=
-
-document.querySelectorAll(".glass-card");
-
-
-
-cards.forEach(card=>{
-
-card.addEventListener(
-
-"mousemove",
-
-e=>{
-
-let x=
-
-e.offsetX/20;
-
-let y=
-
-e.offsetY/20;
-
-card.style.transform=
-
-`rotateY(${x}deg)
-rotateX(${-y}deg)`;
-
-});
-
-
-
-card.addEventListener(
-
-"mouseleave",
-
-()=>{
-
-card.style.transform=
-
-"rotate(0deg)";
-
-});
+}, 4000);
 
 });
 
@@ -78,4 +37,4 @@ if(navToggle && navMenu){
             navToggle.classList.remove("open");
         });
     });
-}
+} 
