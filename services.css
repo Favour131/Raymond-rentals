@@ -44,6 +44,12 @@ align-items:center;
 text-align:center;
 }
 
+@media screen and (max-width:1306px) {
+    .services-hero{
+        height: 90vh;
+    }
+}
+
 .overlay{
 position:absolute;
 inset:0;
@@ -54,7 +60,10 @@ background:rgba(0,0,0,.65);
 position:relative;
 z-index:2;
 max-width:700px;
-padding:20px;
+padding-top:60px;
+padding-right:20px;
+padding-bottom:20px;
+padding-left:20px;
 }
 
 .hero-content h1{
@@ -188,14 +197,22 @@ transform:translateY(-5px);
     height:auto;
     padding:80px 0;
 }
+.nav-menu ul li a{
+font-size:1.2rem;
+}
+.nav-menu ul li{
+    padding: 10px;
+}
 
 .hero-content h1{
     font-size:2.7rem;
 }
+
 .hero-content{
     max-width:100%;
     padding:25px 20px;
     margin:auto;
+    padding-top:60px;
 }
 
 .section-title h2{
