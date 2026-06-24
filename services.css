@@ -249,3 +249,10 @@ font-size:1.2rem;
     padding-top:20px;
 }
 }
+@media screen and (max-width:800px) {
+    .services-hero {
+        height: 65vh;
+        min-height: 65vh;
+        padding-top: 60px;
+    }
+}

@@ -243,6 +243,7 @@ a {
     animation: fade 2s;
     margin: auto;
     padding-top: 60px;
+    margin-bottom: 40px;
 }
 
 .tag {
@@ -535,6 +536,7 @@ h1 {
 @media(max-width:1300px) {
     .hero-content {
         margin-top: 20px;
+        margin-bottom: 40px;
     }
     .services-hero , .fleet-hero , .contact-hero , .about-hero {
         height: 120vh;
@@ -674,6 +676,7 @@ h1 {
     }
 }
 
+
 /* SMALL PHONES */
 
 @media(max-width:480px) {
@@ -753,6 +756,7 @@ h1 {
         width: 100%;
 
         max-width: 700px;
+        margin-bottom: 40px;
 
     }
 
@@ -793,6 +797,28 @@ h1 {
 }
 
 
+
+/* ================================= */
+/* 720PX BREAKPOINT */
+/* ================================= */
+
+@media screen and (max-width:720px) {
+    .hero,
+    .services-hero,
+    .fleet-hero,
+    .contact-hero,
+    .about-hero {
+        height: auto;
+        min-height: 85vh;
+        padding-top: 70px;
+        padding-bottom: 80px;
+    }
+
+    .hero-content {
+        padding-top: 50px;
+        padding-bottom: 120px;
+    }
+}
 
 /* ================================= */
 /* MOBILE */
@@ -844,6 +870,7 @@ h1 {
     .hero-content {
 
         width: 100%;
+        margin-bottom: 40px;
 
     }
 
